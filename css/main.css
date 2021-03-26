@@ -1,0 +1,343 @@
+.country-card {
+  overflow: scroll;
+}
+
+.c-sidebar {
+  overflow-y: hidden;
+}
+
+.country {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  list-style: none;
+  flex: 1;
+  padding: 0;
+}
+
+.card-data-number h5 {
+  font-size: 14px;
+  font-family: "MyriadPro-Regular";
+  font-weight: 300;
+}
+
+.card-data-number h6 {
+  margin-top: -8px;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "BebasNeue-Regular";
+  color: rgb(138, 138, 138);
+}
+
+.flag-icon {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  margin-right: 24px;
+}
+
+.country-name {
+  margin-top: 2px;
+  font-size: 14px;
+  font-family: "MyriadPro-Regular";
+
+  font-weight: 300;
+}
+.country-percentage {
+  font-size: 18px;
+  font-family: "BebasNeue-Regular";
+  color: rgb(138, 138, 138);
+}
+#example {
+  display: table;
+}
+.user-card-data {
+  font-family: "MyriadPro-SemiBold";
+  overflow: hidden;
+}
+
+.user-card-data h5, .user-card-data span, .user-card-data img{
+  margin-left: 8px;
+}
+.table-heading, .user-card-data thead th {
+  font-family: "BebasNeue-Regular";
+  font-size: 16px;
+  font-weight: 200;
+  font-weight: lighter;
+}
+
+
+@media (max-width: 1200px) {
+  .user-card-data {
+    overflow: auto;
+  }
+}
+.user-row td {
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.user-card-data thead th {
+  font-family: "BebasNeue-Regular";
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.user-row h5 {
+  font-size: 12px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: "MyriadPro-Regular";
+  
+}
+.user-row span {
+  color: rgb(147, 147, 147);
+  font-family: "MyriadPro-Regular";
+  font-size: 12px;
+
+
+}
+.user-row .flag-icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+.user-image {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+.user-card thead tr {
+  font-size: 20px;
+  font-family: "BebasNeue-Regular";
+  font-weight: 300;
+}
+.user-row td span {
+  display: block ruby;
+}
+.icon-image {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: white;
+}
+.device-text {
+  font-size: 20px;
+  font-family: "BebasNeue-Regular";
+  color: white;
+}
+.device-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 12px;
+  margin-top: 4px;
+}
+.action-icons {
+  color: #fff;
+  margin-right: 12px;
+  height: 36px;
+  width: 36px;
+
+  color: #fff;
+  font-size: 24px;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-decoration: none;
+}
+
+.action-icons:hover {
+  margin-right: 12px;
+
+  background-color: #525254;
+  color: #fff;
+  font-size: 24px;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-decoration: none;
+}
+
+.line-card-1 {
+  padding: 6px 20px 6px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  background: linear-gradient(to right, #28292b, #2b2b2d);
+}
+.line-card-1 h5 {
+  font-family: "MyriadPro-Regular";
+  font-size: 15px;
+}
+.line-card {
+  padding: 16px 16px 8px 16px;
+  border-radius: 12px;
+  background: linear-gradient(to right, #28292b, #2b2b2d);
+}
+.line-card-icon {
+  width: 16px;
+  height: 16px;
+}
+.card-linear-color {
+  background: linear-gradient(to right, #28292b, #2b2b2d);
+}
+
+.bitcoin {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  list-style: none;
+  flex: 1;
+  padding: 0;
+  vertical-align: middle;
+  margin-top: -18px;
+}
+
+.bitcoin-percentage {
+  font-family: "BebasNeue-Regular";
+  font-size: 18px;
+  color: #9b9b9b;
+}
+.bitcoin-value {
+  font-family: "MyriadPro-Regular";
+  margin-top: 2px;
+  font-size: 16px;
+  text-align: right;
+
+}
+.bitcoin-name {
+  font-family: "MyriadPro-Regular";
+  font-size: 16px;
+  color: #a7a7a7;
+}
+.bitcoin-icon {
+}
+.trade-table {
+  margin-top: 24px;
+  margin-left: 24px;
+}
+.trade-table .trade-heading {
+  font-family: "MyriadPro-SemiBold";
+  text-align: right;
+  font-size: 14px;
+  color: #7b7b7b;
+}
+
+.trade-table .trade-data {
+  font-family: "MyriadPro-SemiBold";
+  font-size: 14px;
+  padding-left: 12px;
+}
+.trade-percentage {
+  font-family: "BebasNeue-Regular";
+  font-size: 24px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 24px;
+}
+
+.app-version {
+  margin-top: -20px;
+}
+
+.app-version ul {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  flex: 1;
+  padding: 0;
+}
+.app-version .version-name {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: "MyriadPro-SemiBold";
+  font-size: 16px;
+}
+
+.app-version .version-percentage {
+  font-family: "BebasNeue-Regular";
+  font-size: 20px;
+  color: #7b7b7b;
+  padding-left: 20px;
+  width: 50px;
+}
+
+.app-version .version-progress {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 20px;
+}
+
+.version-progress-fill {
+  content: "";
+  height: 15px;
+  width: 100px;
+  background-color: #0097ad;
+  border-radius: 0 25px 25px 0;
+}
+
+
+.version-progress-fill:hover {
+  background-color: #00d4ff;
+}
+.money h6 {
+  color: #a0a0a0;
+}
+
+@media (max-width: 1281px) {
+  .bitcoin-value {
+    font-family: "MyriadPro-Bold";
+    margin-top: 0;
+    font-size: 14px;
+  }
+  .bitcoin-percentage {
+    font-family: "BebasNeue-Regular";
+    font-size: 14px;
+    margin-top: -2px;
+  }
+  .bitcoin-name {
+    margin-top: -2px;
+  }
+  .trade-percentage {
+    font-family: "BebasNeue-Regular";
+    font-size: 24px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .trade-table {
+    margin-top: 24px;
+    margin-left: 12px;
+  }
+  .trade-table .trade-heading {
+    text-align: left;
+  }
+  .trade-table .trade-data {
+    text-align: left;
+  }
+  .trade-percentage {
+    position: absolute;
+    margin-top: 60%;
+    margin-left: 40px;
+  }
+}

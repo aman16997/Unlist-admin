@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v3.4.0
+* @link https://coreui.io
+* Copyright (c) 2020 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+<html lang="en">
+
+<head>
+  <base href="./">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <title>Kraken</title>
+
+  <!-- Main styles for this application-->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- Custom Style -->
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/bootstrapChanges.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet">
+
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+
+</head>
+
+<body class="c-app">
+  <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show c-sidebar-minimized" id="sidebar">
+
+    <ul class="c-sidebar-nav">
+      <!--  -->
+      <li class="c-sidebar-nav-item nav-dark nav-disable p-3">
+        <img src="assets/img/menu/logo.svg" alt="" class="ml-3">
+      </li>
+      <li class="c-sidebar-nav-item nav-dark nav-disable p-3">
+        <img src="assets/img/avatars/2.jpg" alt="" class="user-image ml-3">
+        <br>
+        <div class="card-title ml-4">JUDO</div>
+      </li>
+      <li class="c-sidebar-nav-item nav-dark nav-disable mt-n3"><a class="c-sidebar-nav-link" href="users.html">
+          <img src="assets/img/menu/user.svg" class=" nav-icon-responsive">
+          <h6>Users</h6>
+        </a>
+      </li>
+      <li class="c-sidebar-nav-item nav-dark nav-disable"><a class="c-sidebar-nav-link" href="#">
+          <img src="assets/img/menu/chat.svg" class=" nav-icon-responsive">
+        </a>
+      </li>
+      <!--  -->
+      <li class="c-sidebar-nav-item nav-dark nav-disable"><a class="c-sidebar-nav-link" href="#">
+          <img src="assets/img/menu/data.svg" class=" nav-icon-responsive">
+        </a>
+      </li>
+      <li class="c-sidebar-nav-item nav-dark nav-disable"><a class="c-sidebar-nav-link" href="#">
+          <img src="assets/img/menu/graph.svg" class=" nav-icon-responsive">
+        </a>
+      </li>
+      <li class="c-sidebar-nav-item nav-dark nav-disable nav-border-bottom"><a class="c-sidebar-nav-link" href="#">
+          <img src="assets/img/menu/heart.svg" class=" nav-icon-responsive">
+
+        </a>
+      </li>
+      <li class="c-sidebar-nav-item nav-dark ">
+        <a class="c-sidebar-nav-link nav-active " href="kraken.html">
+          <img src="assets/img/menu/kraken.svg" class=" ml-1 nav-icon-responsive">
+          <h6 class="ml-2 mt-3">Kraken</h6>
+        </a>
+      </li>
+      <li class="c-sidebar-nav-item nav-dark nav-disable nav-border-up"><a class="c-sidebar-nav-link" href="#">
+          <img src="assets/img/menu/dollar.svg" class=" nav-icon-responsive">
+        </a>
+      </li>
+      <li class="c-sidebar-nav-item nav-dark nav-disable"><a class="c-sidebar-nav-link" href="#">
+          <img src="assets/img/menu/attention.svg" class=" nav-icon-responsive">
+        </a>
+      </li>
+      <li class="c-sidebar-nav-item nav-dark "><a class="c-sidebar-nav-link nav-disable " href="#">
+          <h5 class="nav-logout ">LOGOUT</h5>
+        </a>
+      </li>
+      <li class="c-sidebar-nav-item nav-dark ">
+        <div class="pb-5"></div>
+        <div class="pb-5"></div>
+        <div class="pb-5"></div>
+        <div class="pb-5"></div>
+      </li>
+ 
+
+    </ul>
+  </div>
+
+  
+  <div class="c-wrapper c-fixed-components">
+
+    <div class="c-body">
+      <main class="c-main">
+        <div class="container-fluid">
+          <div class="fade-in">
+            <div class="row">
+              <!-- 1st Card -->
+              <div class="col-sm-6 col-lg-3">
+                <div class="line-card text-white bg-dark">
+                  <div class="">
+                    <h5 class="card-title mb-1">TRADE TYPES</h5>
+                  </div>
+                </div>
+                <a href="#" class="line-card-1 text-white bg-dark mt-3">
+                  <h5 class="mr-auto my-1">Completed Trades</h5>
+                  <svg class="line-card-icon">
+                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-caret-right"></use>
+                  </svg>
+                </a>
+                <a href="#" class="line-card-1 text-white bg-dark mt-2">
+                  <h5 class="mr-auto my-1">Users Trades</h5>
+                  <svg class="line-card-icon">
+                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-caret-right"></use>
+                  </svg>
+                </a>
+                <a href="#" class="line-card-1 text-white bg-dark mt-2">
+                  <h5 class="mr-auto my-1">Trades Rounds</h5>
+                  <svg class="line-card-icon">
+                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-caret-right"></use>
+                  </svg>
+                </a>
+                <a href="#" class="line-card-1 text-white bg-dark mt-2">
+                  <h5 class="mr-auto my-1">Trade Logs</h5>
+                  <svg class="line-card-icon">
+                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-caret-right"></use>
+                  </svg>
+                </a>
+                <a href="#" class="line-card-1 text-white bg-dark mt-2">
+                  <h5 class="mr-auto my-1">USDC Orders</h5>
+                  <svg class="line-card-icon">
+                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-caret-right"></use>
+                  </svg>
+                </a>
+              </div>
+              <!-- 2nd Card -->
+              <div class="col-sm-6 col-lg-3">
+                <div class="card card-linear-color text-white bg-dark">
+                  <div class="card-body card-body pb-0 ">
+                    <h5 class="card-title pb-3">AUTO TRADING SETUP</h5>
+                    <div class="d-flex">
+                      <div class="card-data-number mt-2">
+                        <h5>Sign-up & Verification</h5>
+                        <h6 class="text-value-lg">793 | 828</h6>
+                      </div>
+                      <div class="ml-auto">
+                        <div class="graph">
+                          <div id="smallGraph"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--  -->
+                    <div class="d-flex mt-3">
+                      <div class="card-data-number mt-2">
+                        <h5>Connected to Unlisted</h5>
+                        <h6 class="text-value-lg">780 | 828</h6>
+                      </div>
+                      <div class="ml-auto">
+                        <div class="graph">
+                          <div id="smallGraph"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--  -->
+                    <div class="d-flex mt-3">
+                      <div class="card-data-number mt-2">
+                        <h5>Funded Account</h5>
+                        <h6 class="text-value-lg">793 | 828</h6>
+                      </div>
+                      <div class="ml-auto">
+                        <div class="graph">
+                          <div id="smallGraph"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 3rd Card -->
+              <div class="col-sm-6 col-lg-3">
+                <div class="card card-linear-color text-white bg-dark country-card">
+                  <div class="card-body card-body pb-0 ">
+                    <h5 class="card-title">CONNECTED WALLET FUNDS</h5>
+
+                    <ul class="bitcoin mt-4">
+                      <li>
+                        <img
+                          src="https://img.favpng.com/24/16/20/united-states-dollar-icon-design-icon-png-favpng-x7EhTvHZtV3aDUKrCXr3hJ4PZ.jpg"
+                          alt="" class="flag-icon bitcoin-icon">
+                      </li>
+                      <li class="bitcoin-name mr-auto">USD</li>
+                      <li class="mr-auto">
+                        <h5 class="bitcoin-value">$7,034,782</h5>
+                      </li>
+                      <li class="bitcoin-percentage">38%</li>
+
+                    </ul>
+                    <ul class="bitcoin ">
+                      <li>
+                        <img
+                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png"
+                          alt="" class="flag-icon bitcoin-icon">
+                      </li>
+                      <li class="bitcoin-name mr-auto">BTC</li>
+                      <li class="mr-auto">
+                        <h5 class="bitcoin-value">$2,934,760</h5>
+                      </li>
+                      <li class="bitcoin-percentage">9%</li>
+
+                    </ul>
+                    <ul class="bitcoin ">
+                      <li>
+                        <img src="https://image.pngaaa.com/466/1559466-middle.png" alt=""
+                          class="flag-icon bitcoin-icon">
+                      </li>
+                      <li class="bitcoin-name mr-auto">ETH</li>
+                      <li class="mr-auto">
+                        <h5 class="bitcoin-value">$1,351,653</h5>
+                      </li>
+                      <li class="bitcoin-percentage">4%</li>
+                    </ul>
+                    <ul class="bitcoin ">
+                      <li>
+                        <img
+                          src="https://cdn4.iconfinder.com/data/icons/crypto-currency-and-coin-2/256/cardano_ada-512.png"
+                          alt="" class="flag-icon bitcoin-icon">
+                      </li>
+                      <li class="bitcoin-name mr-auto">ADA</li>
+                      <li class="mr-auto">
+                        <h5 class="bitcoin-value">$2,365,561</h5>
+                      </li>
+                      <li class="bitcoin-percentage">8%</li>
+
+                    </ul>
+                    <ul class="bitcoin ">
+                      <li>
+                        <img
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIY7klc2Eabqn8WuxllX6TTRGUByYlVjhVmXjnZbvRdf82wPyeFT02I2GBJbPsUstKkLA&usqp=CAU"
+                          alt="" class="flag-icon bitcoin-icon">
+                      </li>
+                      <li class="bitcoin-name mr-auto">BNB</li>
+                      <li class="mr-auto">
+                        <h5 class="bitcoin-value">$755,662</h5>
+                      </li>
+                      <li class="bitcoin-percentage">9%</li>
+
+                    </ul>
+                    <ul class="bitcoin ">
+                      <li>
+                        <img src="https://assets.coingecko.com/coins/images/12171/large/aJGBjJFU_400x400.jpg?1597804776"
+                          alt="" class="flag-icon bitcoin-icon">
+                      </li>
+                      <li class="bitcoin-name mr-auto">DOT</li>
+                      <li class="mr-auto">
+                        <h5 class="bitcoin-value">$654,654</h5>
+                      </li>
+                      <li class="bitcoin-percentage">4%</li>
+                    </ul>
+                    <ul class="bitcoin ">
+                      <li>
+                        <img
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlQLcZC2Qn-7oGVVfJxUQKKz1kIOI90beUeHt--H2ixbDUmoZOGHGmdslVKzb9LNFfWI4&usqp=CAU"
+                          alt="" class="flag-icon bitcoin-icon">
+                      </li>
+                      <li class="bitcoin-name mr-auto">XRP</li>
+                      <li class="mr-auto">
+                        <h5 class="bitcoin-value">$54,251</h5>
+                      </li>
+                      <li class="bitcoin-percentage">8%</li>
+                    </ul>
+                    <ul class="bitcoin ">
+                      <li>
+                        <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/1975.png" alt=""
+                          class="flag-icon bitcoin-icon">
+                      </li>
+                      <li class="bitcoin-name mr-auto">LINK</li>
+                      <li class="mr-auto">
+                        <h5 class="bitcoin-value">$53,570</h5>
+                      </li>
+                      <li class="bitcoin-percentage">8%</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- 4TH Card -->
+              <div class="col-sm-6 col-lg-3">
+                <div class="card card-linear-color text-white bg-dark country-card">
+                  <div class="card-body card-body pb-0 ">
+                    <h5 class="card-title">OPEN TRADE</h5>
+                    <div class="d-flex">
+                      <div class="icon mr-md-3 mr-1 mt-2">
+                        <span class="material-icons">
+                          explore
+                        </span>
+                      </div>
+                      <div class="money mr-auto mt-2">
+                        <h5>$7,000,000</h5>
+                        <h6>$34,782</h6>
+                      </div>
+                      <div class="graph">
+                        <div id="smallGraph"></div>
+                      </div>
+                    </div>
+                    <div class="d-flex trade-table">
+                      <table>
+                        <tr>
+                          <td class="trade-heading">
+                            Direction
+                          </td>
+                          <td class="trade-data">
+                            Long
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="trade-heading">
+                            Date
+                          </td>
+                          <td class="trade-data">
+                            03/18/21
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="trade-heading">
+                            AV. Entry
+                          </td>
+                          <td class="trade-data">
+                            $18,670
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="trade-heading">
+                            Stop Price
+                          </td>
+                          <td class="trade-data">
+                            $17,656
+                          </td>
+                        </tr>
+                      </table>
+                      <div class="trade-percentage">
+                        <div class="text-success">
+                          +42%
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!--  Table-->
+            <div class=" card-1 card-linear-color bg-dark text-white user-card  ">
+              <div class="card-body p-0">
+                <div class="d-flex">
+                  <h4 class="card-title px-4 pt-3 ">USER LIST</h4>
+                  <a href="#" class="ml-auto pr-2 pt-2">
+                    <img src="assets/img/add-button.svg" alt="">
+                  </a>
+                </div>
+                <div class="user-card-data table-responsive-md mb-5   ">
+                  <table id="example" class="table text-white table-sortable">
+                    <thead>
+                      <tr>
+            
+                      <th style="font-weight: 200;">USER</th>
+                      <th style="font-weight: 200;">EMAIL</th>
+                      <th style="font-weight: 200;">DEV.</th>
+                      <th style="font-weight: 200;">VER.</th>
+                      <th style="font-weight: 200;">LAST SEEN</th>
+                      <th style="font-weight: 200;">SIGNUP</th>
+                      <th style="font-weight: 200;">BALANCE</th>
+                      <th style="font-weight: 200;">COUNTRY</th>
+                      <th style="font-weight: 200;">FEE</th>
+                      <th style="font-weight: 200;">STATUS</th>
+                      <th style="font-weight: 200;">ACTIONS</th>
+            
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!--  -->
+                      <tr class="user-row">
+                        <td>
+                          <div class="d-flex">
+                            <img src="assets/img/avatars/2.jpg" alt="" class="user-image">
+                            <h5 class="my-auto ml-2">Glenn Spong</h5>
+                          </div>
+                        </td>
+                        <td>
+                          <h5 class="">glenn.spong@gmail.com</h5>
+                        </td>
+                        <td>
+                          <img src="assets/img/apple.png" alt="" class="icon-image">
+                        </td>
+                        <td>
+                          <h5 class="">4.0.3</h5>
+                        </td>
+                        <td><span>06:33 am</span>
+                          <h5>
+                            03/16/21</h5>
+                        </td>
+                        <td><span>06:33 am</span>
+                          <h5>
+                            03/16/21</h5>
+                        </td>
+                        <td>
+                          <h5 class="">$52,986,050</h5>
+                        </td>
+                        <td>
+                          <div class="d-flex">
+                            <img src="assets/img/us-flag.png" alt="" class="flag-icon">
+                            <h5 class="my-auto">USA</h5>
+                          </div>
+                        </td>
+                        <td>
+                          <h5 class="">10%</h5>
+                        </td>
+                        <td>
+                          <img src="assets/img/right-icon.svg" alt="">
+                        </td>
+            
+                        <td class="">
+                          <div class="d-flex border-0">
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/pencil.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/delete.svg" alt="">
+            
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/eye.svg" alt="">
+            
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/graph-icon.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/add.svg" alt="">
+            
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <!--  -->
+            
+                      <tr class="user-row">
+                        <td>
+                          <div class="d-flex">
+                            <img src="assets/img/avatars/2.jpg" alt="" class="user-image">
+                            <h5 class="my-auto ml-2">Glenn Spong</h5>
+                          </div>
+                        </td>
+                        <td>
+                          <h5 class="">glenn.spong@gmail.com</h5>
+                        </td>
+                        <td>
+                          <img src="assets/img/apple.png" alt="" class="icon-image">
+                        </td>
+                        <td>
+                          <h5 class="">4.0.3</h5>
+                        </td>
+                        <td><span>06:33 am</span>
+                          <h5>
+                            03/16/21</h5>
+                        </td>
+                        <td><span>06:33 am</span>
+                          <h5>
+                            03/16/21</h5>
+                        </td>
+                        <td>
+                          <h5 class="">$52,986,050</h5>
+                        </td>
+                        <td>
+                          <div class="d-flex">
+                            <img src="assets/img/us-flag.png" alt="" class="flag-icon">
+                            <h5 class="my-auto">USA</h5>
+                          </div>
+                        </td>
+                        <td>
+                          <h5 class="">10%</h5>
+                        </td>
+                        <td>
+                          <img src="assets/img/right-icon.svg" alt="">
+                        </td>
+            
+                        <td class="">
+                          <div class="d-flex border-0">
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/pencil.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/delete.svg" alt="">
+            
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/eye.svg" alt="">
+            
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/graph-icon.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/add.svg" alt="">
+            
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <!--  -->
+            
+                      <tr class="user-row">
+                        <td>
+                          <div class="d-flex">
+                            <img src="assets/img/avatars/2.jpg" alt="" class="user-image">
+                            <h5 class="my-auto ml-2">Glenn Spong</h5>
+                          </div>
+                        </td>
+                        <td>
+                          <h5 class="">glenn.spong@gmail.com</h5>
+                        </td>
+                        <td>
+                          <img src="assets/img/apple.png" alt="" class="icon-image">
+                        </td>
+                        <td>
+                          <h5 class="">4.0.3</h5>
+                        </td>
+                        <td><span>06:33 am</span>
+                          <h5>
+                            03/16/21</h5>
+                        </td>
+                        <td><span>06:33 am</span>
+                          <h5>
+                            03/16/21</h5>
+                        </td>
+                        <td>
+                          <h5 class="">$52,986,050</h5>
+                        </td>
+                        <td>
+                          <div class="d-flex">
+                            <img src="assets/img/us-flag.png" alt="" class="flag-icon">
+                            <h5 class="my-auto">USA</h5>
+                          </div>
+                        </td>
+                        <td>
+                          <h5 class="">10%</h5>
+                        </td>
+                        <td>
+                          <img src="assets/img/right-icon.svg" alt="">
+                        </td>
+            
+                        <td class="">
+                          <div class="d-flex border-0">
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/pencil.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/delete.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/eye.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/graph-icon.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/add.svg" alt="">
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <!--  -->
+                      <tr class="user-row">
+                        <td>
+                          <div class="d-flex">
+                            <img src="assets/img/avatars/2.jpg" alt="" class="user-image">
+                            <h5 class="my-auto ml-2">Glenn Spong</h5>
+                          </div>
+                        </td>
+                        <td>
+                          <h5 class="">glenn.spong@gmail.com</h5>
+                        </td>
+                        <td>
+                          <img src="assets/img/apple.png" alt="" class="icon-image">
+                        </td>
+                        <td>
+                          <h5 class="">4.0.3</h5>
+                        </td>
+                        <td><span>06:33 am</span>
+                          <h5>
+                            03/16/21</h5>
+                        </td>
+                        <td><span>06:33 am</span>
+                          <h5>
+                            03/16/21</h5>
+                        </td>
+                        <td>
+                          <h5 class="">$52,986,050</h5>
+                        </td>
+                        <td>
+                          <div class="d-flex">
+                            <img src="assets/img/us-flag.png" alt="" class="flag-icon">
+                            <h5 class="my-auto">USA</h5>
+                          </div>
+                        </td>
+                        <td>
+                          <h5 class="">10%</h5>
+                        </td>
+                        <td>
+                          <img src="assets/img/right-icon.svg" alt="">
+                        </td>
+            
+                        <td class="">
+                          <div class="d-flex border-0">
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/pencil.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/delete.svg" alt="">
+            
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/eye.svg" alt="">
+            
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/graph-icon.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/add.svg" alt="">
+            
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+            
+                    </tbody>
+                  </table>
+                </div>
+            
+              </div>
+            
+            </div>
+            <!-- /.card-->
+
+          </div>
+        </div>
+      </main>
+
+    </div>
+  </div>
+  <!-- CoreUI and necessary plugins-->
+  <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+  <!--[if IE]><!-->
+  <script src="vendors/@coreui/icons/js/svgxuse.min.js"></script>
+  <!--<![endif]-->
+  <!-- Plugins and scripts required by this view-->
+  <script src="vendors/@coreui/chartjs/js/coreui-chartjs.bundle.js"></script>
+  <script src="vendors/@coreui/utils/js/coreui-utils.js"></script>
+  <script src="js/main.js"></script>
+ 
+  <script>
+    $(document).ready(function () {
+      $('#example').DataTable({
+        "paging": false,
+        "info": false,
+        "searching": false,
+        "columnDefs": [{
+"searchable": false,
+"orderable": false,
+"targets": [10]
+},]
+      });
+    });
+
+
+  </script>
+
+</body>
+
+</html>

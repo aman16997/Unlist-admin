@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v3.4.0
+* @link https://coreui.io
+* Copyright (c) 2020 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+<html lang="en">
+
+<head>
+  <base href="./">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <title>Users</title>
+
+  <link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet">
+  <!-- Main styles for this application-->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- Custom Style -->
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/bootstrapChanges.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+
+</head>
+
+<body class="c-app">
+  <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show c-sidebar-minimized" id="sidebar">
+  
+    <ul class="c-sidebar-nav">
+      <!--  -->
+      <li class="c-sidebar-nav-item nav-dark nav-disable p-3">
+        <img src="assets/img/menu/logo.svg" alt="" class="ml-3">
+      </li>
+      <li class="c-sidebar-nav-item nav-dark nav-disable nav-border-bottom nav-disable p-3">
+        <img src="assets/img/avatars/2.jpg" alt="" class="user-image ml-3">
+        <br>
+        <div class="card-title ml-4">JUDO</div>
+      </li>
+      <li class="c-sidebar-nav-item nav-dark "><a class="c-sidebar-nav-link  nav-active" href="users.html">
+          <img src="assets/img/menu/user.svg" class="ml-1 nav-icon-responsive">
+          <h6>Users</h6>
+        </a>
+      </li>
+      <li class="c-sidebar-nav-item nav-dark nav-border-up nav-disable"><a class="c-sidebar-nav-link" href="#">
+          <img src="assets/img/menu/chat.svg" class=" nav-icon-responsive">
+        </a>
+      </li>
+      <!--  -->
+      <li class="c-sidebar-nav-item nav-dark nav-disable"><a class="c-sidebar-nav-link" href="#">
+          <img src="assets/img/menu/data.svg" class=" nav-icon-responsive">
+        </a>
+      </li>
+      <li class="c-sidebar-nav-item nav-dark nav-disable"><a class="c-sidebar-nav-link" href="#">
+          <img src="assets/img/menu/graph.svg" class=" nav-icon-responsive">
+        </a>
+      </li>
+      <li class="c-sidebar-nav-item nav-dark nav-disable "><a class="c-sidebar-nav-link" href="#">
+          <img src="assets/img/menu/heart.svg" class=" nav-icon-responsive">
+  
+        </a>
+      </li>
+      <li class="c-sidebar-nav-item nav-dark ">
+        <a class="c-sidebar-nav-link nav-disable " href="kraken.html">
+          <img src="assets/img/menu/kraken.svg" class=" nav-icon-responsive">
+          <h6 class="ml-2 mt-3">Kraken</h6>
+        </a>
+      </li>
+      <li class="c-sidebar-nav-item nav-dark nav-disable "><a class="c-sidebar-nav-link" href="#">
+          <img src="assets/img/menu/dollar.svg" class=" nav-icon-responsive">
+        </a>
+      </li>
+      <li class="c-sidebar-nav-item nav-dark nav-disable"><a class="c-sidebar-nav-link" href="#">
+          <img src="assets/img/menu/attention.svg" class=" nav-icon-responsive">
+        </a>
+      </li>
+      <li class="c-sidebar-nav-item nav-dark "><a class="c-sidebar-nav-link nav-disable " href="#">
+          <h5 class="nav-logout ">LOGOUT</h5>
+        </a>
+      </li>
+      <li class="c-sidebar-nav-item nav-dark ">
+        <div class="pb-5"></div>
+        <div class="pb-5"></div>
+        <div class="pb-5"></div>
+        <div class="pb-5"></div>
+      </li>
+  
+  
+    </ul>
+  </div>
+
+
+  <div class="c-wrapper c-fixed-components">
+
+    <div class="c-body">
+      <main class="c-main">
+        <div class="container-fluid">
+          <div class="fade-in">
+            <div class="row">
+              <!-- 1st Card -->
+              <div class="col-sm-6 col-lg-3">
+                <div class="card text-white bg-dark">
+                  <div class="card-body card-body pb-0 ">
+                    <h5 class="card-title">USER STATUS</h5>
+                    <div class="d-flex" style="margin-top: 30px;">
+                      <div class="">
+                        <div>Active Users</div>
+                        <div class=" device-text">793 | 828</div>
+                      </div>
+                      <div class="ml-auto">
+                        <div class="graph">
+                          <div id="smallGraph"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mt-3">
+                      <div class="">
+                        <div>Deleted Users</div>
+                      <div class=" device-text">16 | 828</div>
+                      </div>
+                      <div class="ml-auto">
+                        <div class="graph">
+                          <div id="smallGraph1"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 2nd Card -->
+              <div class="col-sm-6 col-lg-3">
+                <div class="card text-white bg-dark">
+                  <div class="card-body card-body pb-0 ">
+                    <h5 class="card-title">DEVICES</h5>
+                    <div class="d-flex " style="margin-top: 30px;">
+                      <div class="float-right">
+                      <div class="c-chart-wrapper" style="height:70px;">
+                        <img
+                          src="assets/img/apple.svg"
+                          alt="" class="device-icon">
+                      </div>
+                      </div>
+                      <div class="">
+                        <div>Apple</div>
+                        <div class=" device-text">793 | 828</div>
+                      </div>
+                      <div class="ml-auto">
+                        <div class="graph">
+                          <div id="smallGraph1"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--  -->
+                    <div class="d-flex ">
+                      <div class="float-right">
+                        <div class="c-chart-wrapper" style="height:70px;">
+                          <img src="assets/img/android.svg" alt="" class="device-icon">
+                        </div>
+                      </div>
+                      <div class="">
+                        <div>Android</div>
+                        <div class=" device-text">793 | 828</div>
+                      </div>
+                      <div class="ml-auto">
+                        <div class="graph">
+                          <div id="smallGraph1"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--  -->
+                    <div class="d-flex">
+                      <div class="ml-md-5">
+                        <div>Unregistered</div>
+                        <div class=" device-text">793 | 828</div>
+                      </div>
+                      <div class="ml-auto">
+                        <div class="graph">
+                          <div id="smallGraph1"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 3rd Card -->
+              <div class="col-sm-6 col-lg-3">
+                <div class="card text-white bg-dark">
+                  <div class="card-body card-body pb-0 ">
+                    <h5 class="card-title">APP VERSION</h5>
+                    <div class="app-version" style="margin-top: 24px;">
+                      <ul>
+                        <li class="version-name">
+                          4.0.3
+                        </li>
+                        <li class="version-percentage">
+                          38%
+                        </li>
+                        <li class="version-progress">
+                          <div class="version-progress-fill" style="width: 90px;"></div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="app-version">
+                      <ul>
+                        <li class="version-name">
+                          4.0.2
+                        </li>
+                        <li class="version-percentage">
+                          9%
+                        </li>
+                        <li class="version-progress">
+                          <div class="version-progress-fill" style="width: 25px;"></div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="app-version">
+                      <ul>
+                        <li class="version-name">
+                          4.0.1
+                        </li>
+                        <li class="version-percentage">
+                          4%
+                        </li>
+                        <li class="version-progress">
+                          <div class="version-progress-fill" style="width: 10px;"></div>
+                        </li>
+                      </ul>
+                    </div>
+                     <div class="app-version">
+                      <ul>
+                        <li class="version-name">
+                          3.0.3
+                        </li>
+                        <li class="version-percentage">
+                          8%
+                        </li>
+                        <li class="version-progress">
+                          <div class="version-progress-fill" style="width: 20px;"></div>
+                        </li>
+                      </ul>
+                    </div>
+                     <div class="app-version">
+                      <ul>
+                        <li class="version-name">
+                          3.0.2
+                        </li>
+                        <li class="version-percentage">
+                          9%
+                        </li>
+                        <li class="version-progress">
+                          <div class="version-progress-fill" style="width: 25px;"></div>
+                        </li>
+                      </ul>
+                    </div>
+                     <div class="app-version">
+                      <ul>
+                        <li class="version-name">
+                          3.0.1
+                        </li>
+                        <li class="version-percentage">
+                          4%
+                        </li>
+                        <li class="version-progress">
+                          <div class="version-progress-fill" style="width: 10px;"></div>
+                        </li>
+                      </ul>
+                    </div>
+                     <div class="app-version">
+                      <ul>
+                        <li class="version-name">
+                          3.0.0
+                        </li>
+                        <li class="version-percentage">
+                          8%
+                        </li>
+                        <li class="version-progress">
+                          <div class="version-progress-fill" style="width: 20px;"></div>
+                        </li>
+                      </ul>
+                    </div>
+                     <div class="app-version">
+                      <ul>
+                        <li class="version-name">
+                          2.0.1
+                        </li>
+                        <li class="version-percentage">
+                          8%
+                        </li>
+                        <li class="version-progress">
+                          <div class="version-progress-fill" style="width: 20px;"></div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 4th Card -->
+              <div class="col-sm-6 col-lg-3">
+                <div class="card text-white bg-dark country-card">
+                  <div class="card-body card-body pb-0 ">
+                    <h5 class="card-title">TOP COUNTRIES</h5>
+
+                    <ul class="country" style="margin-top: 25px;">
+                      <li>
+                        <img src="assets/img/United-States.png" alt="" class="flag-icon">
+                      </li>
+                      <li class="mr-auto">
+                        <h5 class="country-name">United States</h5>
+                      </li>
+                      <li class="country-percentage">38%</li>
+                    </ul>
+
+                    <ul class="country mt-n3">
+                      <li>
+                        <img
+                          src="assets/img/Australia.png"
+                          alt="" class="flag-icon">
+                      </li>
+                      <li class="mr-auto">
+                        <h5 class="country-name">Australia</h5>
+                      </li>
+                      <li class="country-percentage">28%</li>
+                    </ul>
+
+                    <ul class="country mt-n3">
+                      <li>
+                      <img src="assets/img/France.png" alt="" class="flag-icon">
+                      </li>
+                      <li class="mr-auto">
+                        <h5 class="country-name">France</h5>
+                      </li>
+                      <li class="country-percentage">19%</li>
+                    </ul>
+
+                    <ul class="country mt-n3">
+                      <li>
+                        <img src="assets/img/India.png" alt="" class="flag-icon">
+                      </li>
+                      <li class="mr-auto">
+                        <h5 class="country-name">India</h5>
+                      </li>
+                      <li class="country-percentage">14%</li>
+                    </ul>
+
+                    <ul class="country mt-n3">
+                      <li>
+                      <img src="assets/img/Ireland.png" alt="" class="flag-icon">
+                      </li>
+                      <li class="mr-auto">
+                        <h5 class="country-name">Ireland</h5>
+                      </li>
+                      <li class="country-percentage">12%</li>
+                    </ul>
+
+                    <ul class="country mt-n3">
+                      <li>
+                      <img src="assets/img/New-Zealand.png" alt="" class="flag-icon">
+                      </li>
+                      <li class="mr-auto">
+                        <h5 class="country-name">New Zealand</h5>
+                      </li>
+                      <li class="country-percentage">8%</li>
+                    </ul>
+
+                    <ul class="country mt-n3">
+                      <li>
+                      <img src="assets/img/Portugal.png" alt="" class="flag-icon">
+                      </li>
+                      <li class="mr-auto">
+                        <h5 class="country-name">Portugal</h5>
+                      </li>
+                      <li class="country-percentage">3%</li>
+                    </ul>
+                    <ul class="country mt-n3">
+                      <li>
+                      <img src="assets/img/United-States.png" alt="" class="flag-icon">
+                      </li>
+                      <li class="mr-auto">
+                        <h5 class="country-name">United Kingdom</h5>
+                      </li>
+                      <li class="country-percentage">2%</li>
+                    </ul>
+
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!--  Table-->
+            <div class=" card-1 card-linear-color bg-dark text-white user-card  ">
+              <div class="card-body p-0">
+                <div class="d-flex">
+                  <h4 class="card-title px-4 pt-3 ">USER LIST</h4>
+                  <a href="#" class="ml-auto pr-2 pt-2">
+                    <img src="assets/img/add-button.svg" alt="">
+                  </a>
+                </div>
+                <div class="user-card-data table-responsive-md mb-5   ">
+                  <table id="example" class="table text-white table-sortable">
+                    <thead>
+                      <tr>
+            
+                        <th class="table-heading">USER</th>
+                        <th class="table-heading">EMAIL</th>
+                        <th class="table-heading">DEV.</th>
+                        <th class="table-heading">VER.</th>
+                        <th class="table-heading">LAST SEEN</th>
+                        <th class="table-heading">SIGNUP</th>
+                        <th class="table-heading">BALANCE</th>
+                        <th class="table-heading">COUNTRY</th>
+                        <th class="table-heading">FEE</th>
+                        <th class="table-heading">STATUS</th>
+                        <th class="table-heading">ACTIONS</th>
+            
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!--  -->
+                      <tr class="user-row">
+                        <td>
+                          <div class="d-flex">
+                            <img src="assets/img/avatars/2.jpg" alt="" class="user-image">
+                            <h5 class="my-auto ml-2">Glenn Spong</h5>
+                          </div>
+                        </td>
+                        <td>
+                          <h5 class="">glenn.spong@gmail.com</h5>
+                        </td>
+                        <td>
+                          <img src="assets/img/apple.png" alt="" class="icon-image">
+                        </td>
+                        <td>
+                          <h5 class="">4.0.3</h5>
+                        </td>
+                        <td><span>06:33 am</span>
+                          <h5>
+                            03/16/21</h5>
+                        </td>
+                        <td><span>06:33 am</span>
+                          <h5>
+                            03/16/21</h5>
+                        </td>
+                        <td>
+                          <h5 class="">$52,986,050</h5>
+                        </td>
+                        <td>
+                          <div class="d-flex">
+                            <img src="assets/img/us-flag.png" alt="" class="flag-icon">
+                            <h5 class="my-auto">USA</h5>
+                          </div>
+                        </td>
+                        <td>
+                          <h5 class="">10%</h5>
+                        </td>
+                        <td>
+                          <img src="assets/img/right-icon.svg" alt="">
+                        </td>
+            
+                        <td class="">
+                          <div class="d-flex border-0">
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/pencil.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/delete.svg" alt="">
+            
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/eye.svg" alt="">
+            
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/graph-icon.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/add.svg" alt="">
+            
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <!--  -->
+            
+                      <tr class="user-row">
+                        <td>
+                          <div class="d-flex">
+                            <img src="assets/img/avatars/2.jpg" alt="" class="user-image">
+                            <h5 class="my-auto ml-2">Glenn Spong</h5>
+                          </div>
+                        </td>
+                        <td>
+                          <h5 class="">glenn.spong@gmail.com</h5>
+                        </td>
+                        <td>
+                          <img src="assets/img/apple.png" alt="" class="icon-image">
+                        </td>
+                        <td>
+                          <h5 class="">4.0.3</h5>
+                        </td>
+                        <td><span>06:33 am</span>
+                          <h5>
+                            03/16/21</h5>
+                        </td>
+                        <td><span>06:33 am</span>
+                          <h5>
+                            03/16/21</h5>
+                        </td>
+                        <td>
+                          <h5 class="">$52,986,050</h5>
+                        </td>
+                        <td>
+                          <div class="d-flex">
+                            <img src="assets/img/us-flag.png" alt="" class="flag-icon">
+                            <h5 class="my-auto">USA</h5>
+                          </div>
+                        </td>
+                        <td>
+                          <h5 class="">10%</h5>
+                        </td>
+                        <td>
+                          <img src="assets/img/right-icon.svg" alt="">
+                        </td>
+            
+                        <td class="">
+                          <div class="d-flex border-0">
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/pencil.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/delete.svg" alt="">
+            
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/eye.svg" alt="">
+            
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/graph-icon.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/add.svg" alt="">
+            
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <!--  -->
+            
+                      <tr class="user-row">
+                        <td>
+                          <div class="d-flex">
+                            <img src="assets/img/avatars/2.jpg" alt="" class="user-image">
+                            <h5 class="my-auto ml-2">Glenn Spong</h5>
+                          </div>
+                        </td>
+                        <td>
+                          <h5 class="">glenn.spong@gmail.com</h5>
+                        </td>
+                        <td>
+                          <img src="assets/img/apple.png" alt="" class="icon-image">
+                        </td>
+                        <td>
+                          <h5 class="">4.0.3</h5>
+                        </td>
+                        <td><span>06:33 am</span>
+                          <h5>
+                            03/16/21</h5>
+                        </td>
+                        <td><span>06:33 am</span>
+                          <h5>
+                            03/16/21</h5>
+                        </td>
+                        <td>
+                          <h5 class="">$52,986,050</h5>
+                        </td>
+                        <td>
+                          <div class="d-flex">
+                            <img src="assets/img/us-flag.png" alt="" class="flag-icon">
+                            <h5 class="my-auto">USA</h5>
+                          </div>
+                        </td>
+                        <td>
+                          <h5 class="">10%</h5>
+                        </td>
+                        <td>
+                          <img src="assets/img/right-icon.svg" alt="">
+                        </td>
+            
+                        <td class="">
+                          <div class="d-flex border-0">
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/pencil.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/delete.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/eye.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/graph-icon.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/add.svg" alt="">
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <!--  -->
+                      <tr class="user-row">
+                        <td>
+                          <div class="d-flex">
+                            <img src="assets/img/avatars/2.jpg" alt="" class="user-image">
+                            <h5 class="my-auto ml-2">Glenn Spong</h5>
+                          </div>
+                        </td>
+                        <td>
+                          <h5 class="">glenn.spong@gmail.com</h5>
+                        </td>
+                        <td>
+                          <img src="assets/img/apple.png" alt="" class="icon-image">
+                        </td>
+                        <td>
+                          <h5 class="">4.0.3</h5>
+                        </td>
+                        <td><span>06:33 am</span>
+                          <h5>
+                            03/16/21</h5>
+                        </td>
+                        <td><span>06:33 am</span>
+                          <h5>
+                            03/16/21</h5>
+                        </td>
+                        <td>
+                          <h5 class="">$52,986,050</h5>
+                        </td>
+                        <td>
+                          <div class="d-flex">
+                            <img src="assets/img/us-flag.png" alt="" class="flag-icon">
+                            <h5 class="my-auto">USA</h5>
+                          </div>
+                        </td>
+                        <td>
+                          <h5 class="">10%</h5>
+                        </td>
+                        <td>
+                          <img src="assets/img/right-icon.svg" alt="">
+                        </td>
+            
+                        <td class="">
+                          <div class="d-flex border-0">
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/pencil.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/delete.svg" alt="">
+            
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/eye.svg" alt="">
+            
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/graph-icon.svg" alt="">
+                            </a>
+                            <a href="#" class="action-icons">
+                              <img src="assets/img/add.svg" alt="">
+            
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+            
+                    </tbody>
+                  </table>
+                </div>
+            
+              </div>
+            
+            </div>
+            <!-- /.card-->
+
+          </div>
+        </div>
+      </main>
+
+    </div>
+  </div>
+  <!-- CoreUI and necessary plugins-->
+  <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+  <!--[if IE]><!-->
+  <script src="vendors/@coreui/icons/js/svgxuse.min.js"></script>
+  <!--<![endif]-->
+  <!-- Plugins and scripts required by this view-->
+  <script src="vendors/@coreui/chartjs/js/coreui-chartjs.bundle.js"></script>
+  <script src="vendors/@coreui/utils/js/coreui-utils.js"></script>
+  <script src="js/main.js"></script>
+
+
+
+
+  <script>
+    $(document).ready(function () {
+      $('#example').DataTable({
+        "paging": false,
+        "info": false,
+        "searching": false,
+        "columnDefs": [{
+"searchable": false,
+"orderable": false,
+"targets": [10]
+},]
+      });
+    });
+
+
+  </script>
+
+</body>
+
+</html>

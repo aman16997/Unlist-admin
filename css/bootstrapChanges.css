@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "BebasNeue-Regular";
+  src: url(../assets/fonts/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: "MyriadPro-Bold";
+  src: url(../assets/fonts/MYRIADPRO-BOLD.OTF);
+}
+
+@font-face {
+  font-family: "MyriadPro-BoldItalic";
+  src: url(../assets/fonts/MYRIADPRO-BOLDIT.OTF);
+}
+@font-face {
+  font-family: "MyriadPro-Light";
+  src: url(../assets/fonts/MyriadPro-Light.otf);
+}
+
+@font-face {
+  font-family: "MyriadPro-SemiBold";
+  src: url(../assets/fonts/MYRIADPRO-SEMIBOLD.OTF);
+}
+
+@font-face {
+  font-family: "MyriadPro-SemiBoldItalic";
+  src: url(../assets/fonts/MYRIADPRO-SEMIBOLDIT.OTF);
+}
+
+@font-face {
+  font-family: "MyriadPro-Regular";
+  src: url(../assets/fonts/MYRIADPRO-REGULAR.OTF);
+}
+
+.gigantic,
+.huge,
+.large,
+.bigger,
+.big,
+h1,
+h2,
+h4,
+h5,
+h6 {
+  font-family: "BebasNeue-Regular", sans-serif;
+}
+
+/* // Typography */
+
+body {
+  font-family: "MyriadPro-Regular", sans-serif;
+}
+
+p {
+  font-family: "MyriadPro-Regular", sans-serif;
+  line-height: 28.5px;
+  font-weight: 400;
+  font-size: 19px;
+  letter-spacing: -0.037px;
+}
+
+.card {
+  height: 290px;
+  border-radius: 16px;
+  overflow: hidden;
+
+}
+.card-1{
+  border-radius: 16px;
+
+}
+
+.card-title {
+  font-family: "BebasNeue-Regular";
+  font-weight: 300;
+  font-size: 18px;
+}
+
+table thead {
+  background-color: #5b5d5f;
+
+}
+
+.c-body, .c-app {
+  background-color: #48484A;
+}
+
+#sidebar {
+  width: 120px;
+  color: #fff;
+  overflow:hidden ;
+  border-radius: 0 24px 24px 0;
+  background-color: #48484A;
+  /* for curve */
+}
+
+.c-sidebar-nav .nav-dark{
+  background: linear-gradient(to right, #28292B ,#2B2B2D);
+
+}
+.nav-border-bottom{
+  border-bottom-right-radius: 24px;
+}
+.nav-border-up{
+
+  border-top-right-radius: 24px;
+
+}
+.nav-active {
+  border-radius: 25px 0 0 25px ;
+  position: relative;
+  margin-left: 10px;
+  background-color: #48484A !important;  
+}
+
+.nav-active h6{
+  margin-left: 10px;
+  margin-top: 10px;
+  font-family: "MyriadPro-Regular";
+}
+.nav-active img{
+  margin-left: -40px;
+
+}
+.nav-disable{
+  
+}
+
+.nav-disable h6{
+    display: none;
+}
+.nav-logout{
+  font-family: "BebasNeue-Regular";
+  font-weight: 300;
+  font-size: 16px;
+  margin-left: 20px;
+}
+.nav-icon-responsive{
+  font-size: 30px;
+  margin-left: 25px;
+}
+.nav-image{
+  width: 30px;
+}
+
+
+.table.dataTable tbody tr {
+    background-color: #2E3032;
+}
+
+table.dataTable thead th, table.dataTable tfoot th {
+    font-weight: 300;
+}
+table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.dataTable thead .sorting_asc_disabled, table.dataTable thead .sorting_desc_disabled {
+    /* background-position: center right; */
+}
+@media (max-width: 500px){
+  .card{
+  height: 350px;
+
+  }
+  .nav-icon-responsive{
+  font-size: 25px;
+}
+}
