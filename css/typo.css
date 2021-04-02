@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "BebasNeue-Regular";
+  src: url(../assets/fonts/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+  font-family: "MyriadPro-Bold";
+  src: url(../assets/fonts/MYRIADPRO-BOLD.OTF);
+}
+
+@font-face {
+  font-family: "MyriadPro-BoldItalic";
+  src: url(../assets/fonts/MYRIADPRO-BOLDIT.OTF);
+}
+@font-face {
+  font-family: "MyriadPro-Light";
+  src: url(../assets/fonts/MyriadPro-Light.otf);
+}
+
+@font-face {
+  font-family: "MyriadPro-SemiBold";
+  src: url(../assets/fonts/MYRIADPRO-SEMIBOLD.OTF);
+}
+
+@font-face {
+  font-family: "MyriadPro-SemiBoldItalic";
+  src: url(../assets/fonts/MYRIADPRO-SEMIBOLDIT.OTF);
+}
+
+@font-face {
+  font-family: "MyriadPro-Regular";
+  src: url(../assets/fonts/MYRIADPRO-REGULAR.OTF);
+}
+
+body {
+  font-family: "MyriadPro-Regular", sans-serif;
+}
+
+p {
+  font-family: "MyriadPro-Regular", sans-serif;
+  line-height: 28.5px;
+  font-weight: 400;
+  font-size: 19px;
+  letter-spacing: -0.037px;
+}
+
+h1 {
+  font-family: bebas-neue-pro, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h2 {
+  font-family: bebas-neue-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h3 {
+  font-family: bebas-neue-pro-semiexpanded, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h4 {
+  font-family: bebas-neue-pro-expanded, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h5 {
+  font-family: bebas-neue-pro-expanded, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+    

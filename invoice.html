@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v3.4.0
+* @link https://coreui.io
+* Copyright (c) 2020 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+<html lang="en">
+
+<head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <title>Invoice</title>
+
+    <!-- Main styles for this application-->
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <!-- Custom Style -->
+    <link href="css/invoice.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/vho1nrb.css">
+    <link href="css/typo.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+
+</head>
+
+<body class="c-app">
+    <div class="c-wrapper c-fixed-components">
+        <div class="c-body">
+            <main class="c-main">
+                <div class="container-fluid">
+                    <div class="fade-in">
+                        <div class="email-container">
+                            <div class="row invoice-header">
+                                <div class="col-6">
+                                    <img src="assets/img/menu/logo.svg" alt="">
+                                </div>
+                                <div class="col-6 text-right">
+                                    <h2>INVOICE</h2>
+                                    <h6>#00001</h6>
+                                </div>
+                            </div>
+                            <!-- Card -->
+                            <div class="row invoice-card-header">
+                                <div class="">
+                                    <div class="card text-black bg-white">
+                                        <div class="card-body p-0 ">
+                                            <div class="card-data-number">
+                                                <h5 class="pb-2 mt-2">Unlisted Project LLC</h5>
+                                                <p>
+                                                    1215 Center Street
+                                                    Wellsville UT 84339
+                                                    USA
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="">
+                                    <div class="card text-black bg-white">
+                                        <div class="card-body p-0 ">
+                                            <div class="card-data-number">
+                                                <h5 class="pb-2 mt-2">Glenn Spong</h5>
+                                                <p>
+                                                    3635 Little Rock Dr,
+                                                    Provo UT 84604
+                                                    USA
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="card text-black bg-white">
+                                        <div class="card-body p-0 ">
+                                            <div class="card-data-number text-right">
+                                                <p class="mt-2">
+                                                    1 April 2021
+                                                    <br />
+                                                    7 day terms
+                                                </p>
+                                                <h5 class="pt-3">$2,450.50 USD</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/ Card -->
+
+                            <!-- Table -->
+                            <div class=" px-4 pb-4">
+                                <div class="invoice-table">
+                                    <div class="card-body p-0">
+                                        <!--  Table-->
+                                        <table id="example">
+                                            <thead>
+                                                <tr>
+
+                                                    <th>TRADE</th>
+                                                    <th>VALUE</th>
+                                                    <th>EXIT DATE</th>
+                                                    <th>PROFIT</th>
+                                                    <th>FEE</th>
+                                                    <th>DUE</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!--  -->
+                                                <tr>
+                                                    <td>ETH Long</td>
+                                                    <td>$100,000.00</td>
+                                                    <td>03/16/21</td>
+                                                    <td>$20,000.00</td>
+                                                    <td>10%</td>
+                                                    <td>$2,000.00</td>
+                                                </tr>
+                                                <!--  -->
+                                                <tr>
+                                                    <td>ETH Long</td>
+                                                    <td>$100,000.00</td>
+                                                    <td>03/16/21</td>
+                                                    <td>$20,000.00</td>
+                                                    <td>10%</td>
+                                                    <td>$2,000.00</td>
+                                                </tr>
+                                                <!--  -->
+                                                <tr>
+                                                    <td>ETH Long</td>
+                                                    <td>$100,000.00</td>
+                                                    <td>03/16/21</td>
+                                                    <td>$20,000.00</td>
+                                                    <td>10%</td>
+                                                    <td>$2,000.00</td>
+                                                </tr>
+                                                <!--  -->
+                                                <tr>
+                                                    <td>ETH Long</td>
+                                                    <td>$100,000.00</td>
+                                                    <td>03/16/21</td>
+                                                    <td>$20,000.00</td>
+                                                    <td>10%</td>
+                                                    <td>$2,000.00</td>
+                                                </tr>
+
+
+                                            </tbody>
+                                        </table>
+                                        <!--/ Table -->
+                                        <div class="invoice-summary " id="invoice-table-summary">
+                                            <div class="qr-code mr-auto ">
+                                                <img src="assets/img/qr-code.png" alt="">
+                                            </div>
+                                            <table class="invoice-details">
+                                                <tr>
+                                                    <td>
+                                                        <h5>SUBTOTAL</h5>
+                                                    </td>
+                                                    <td>
+                                                        <p>$8,000.00 USD</p>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h5>TAX</h5>
+                                                    </td>
+                                                    <td>
+                                                        <p>10%</p>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h5>TOTAL</h5>
+                                                    </td>
+                                                    <td>
+                                                        <p>$8,800.00 USD</p>
+
+                                                    </td>
+                                                </tr>
+                                                <tr class="balance-due">
+                                                    <td>
+                                                        <h5>Balance Due</h5>
+                                                    </td>
+                                                    <td>
+                                                        <p>$8,800.00 USD</p>
+
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                        <!-- Payment Details -->
+                                        <div class="details">
+                                            <h6>Payment Details</h6>
+                                            <p>Use the QR Code, or transfer USDC to the following wallet address:
+                                            </p>
+                                            <h4>ABCXYZ***********</h4>
+                                            <i>This wallet address is dedicated to "you" and will never change. Feel free to save it for future use.</i>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--/ Table -->
+
+                            
+
+                        </div>
+                    </div>
+            </main>
+        </div>
+    </div>
+    <!-- CoreUI and necessary plugins-->
+    <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+    <!--[if IE]><!-->
+    <script src="vendors/@coreui/icons/js/svgxuse.min.js"></script>
+    <!--<![endif]-->
+    <!-- Plugins and scripts required by this view-->
+    <script src="vendors/@coreui/chartjs/js/coreui-chartjs.bundle.js"></script>
+    <script src="vendors/@coreui/utils/js/coreui-utils.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable({
+                "paging": false,
+                "info": false,
+                "searching": false,
+                "columnDefs": [{
+                    "searchable": false,
+                    "orderable": false,
+                    "targets": [10]
+                },]
+            });
+        });
+
+
+    </script>
+
+</body>
+
+</html>
