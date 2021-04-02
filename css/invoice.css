@@ -17,7 +17,7 @@
 }
 
 .invoice-card-header {
-  padding: 10px 20px;
+  padding: 10px 20px 0 20px;
   display: flex;
 }
 
@@ -28,7 +28,7 @@
   padding: 20px 40px;
   box-shadow: 5px 5px 7px #d9d9d9;
   width: 180px;
-  margin-left: 10px;
+  margin-left: 12px;
   min-height: 134px;
   max-height: 134px;
 }
@@ -53,7 +53,8 @@
   padding: 20px 0;
   background-color: white;
   border-radius: 12px;
-  box-shadow: 5px 5px 20px #e3e3e3;
+  box-shadow: 5px 5px 7px #d9d9d9;
+
 }
 .invoice-table thead tr {
   background-color: #f4f7f8;
