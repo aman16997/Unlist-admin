@@ -19,15 +19,19 @@
     <!-- Main styles for this application-->
     <!-- <link href="css/style.css" rel="stylesheet"> -->
     <!-- Custom Style -->
-    <link href="css/invoice.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/vho1nrb.css">
-    <link href="css/typo.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/typo.css" rel="stylesheet">
+    <link href="css/invoice.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet">
 
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <!-- Cache Clear -->
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <!-- /Cache -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
@@ -102,61 +106,64 @@
                             <div class=" px-3 pb-4">
                                 <div class="invoice-table">
                                     <div class="card-body p-0">
-                                        <!--  Table-->
-                                        <table id="example">
-                                            <thead>
-                                                <tr>
-
-                                                    <th>TRADE</th>
-                                                    <th>VALUE</th>
-                                                    <th>EXIT DATE</th>
-                                                    <th>PROFIT</th>
-                                                    <th>FEE</th>
-                                                    <th>DUE</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <!--  -->
-                                                <tr>
-                                                    <td>ETH Long</td>
-                                                    <td>$100,000.00</td>
-                                                    <td>03/16/21</td>
-                                                    <td>$20,000.00</td>
-                                                    <td>10%</td>
-                                                    <td>$2,000.00</td>
-                                                </tr>
-                                                <!--  -->
-                                                <tr>
-                                                    <td>ETH Long</td>
-                                                    <td>$100,000.00</td>
-                                                    <td>03/16/21</td>
-                                                    <td>$20,000.00</td>
-                                                    <td>10%</td>
-                                                    <td>$2,000.00</td>
-                                                </tr>
-                                                <!--  -->
-                                                <tr>
-                                                    <td>ETH Long</td>
-                                                    <td>$100,000.00</td>
-                                                    <td>03/16/21</td>
-                                                    <td>$20,000.00</td>
-                                                    <td>10%</td>
-                                                    <td>$2,000.00</td>
-                                                </tr>
-                                                <!--  -->
-                                                <tr>
-                                                    <td>ETH Long</td>
-                                                    <td>$100,000.00</td>
-                                                    <td>03/16/21</td>
-                                                    <td>$20,000.00</td>
-                                                    <td>10%</td>
-                                                    <td>$2,000.00</td>
-                                                </tr>
-
-
-                                            </tbody>
-                                        </table>
-                                        <!--/ Table -->
+                                        <div class="table-responsive-sm">
+                                            <!--  Table-->
+                                            <table id="example" class="">
+                                                <thead>
+                                                    <tr>
+                                            
+                                                        <th>TRADE</th>
+                                                        <th>VALUE</th>
+                                                        <th>EXIT DATE</th>
+                                                        <th>PROFIT</th>
+                                                        <th>FEE</th>
+                                                        <th>DUE</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!--  -->
+                                                    <tr>
+                                                        <td>ETH Long</td>
+                                                        <td>$100,000.00</td>
+                                                        <td>03/16/21</td>
+                                                        <td>$20,000.00</td>
+                                                        <td>10%</td>
+                                                        <td>$2,000.00</td>
+                                                    </tr>
+                                                    <!--  -->
+                                                    <tr>
+                                                        <td>ETH Long</td>
+                                                        <td>$100,000.00</td>
+                                                        <td>03/16/21</td>
+                                                        <td>$20,000.00</td>
+                                                        <td>10%</td>
+                                                        <td>$2,000.00</td>
+                                                    </tr>
+                                                    <!--  -->
+                                                    <tr>
+                                                        <td>ETH Long</td>
+                                                        <td>$100,000.00</td>
+                                                        <td>03/16/21</td>
+                                                        <td>$20,000.00</td>
+                                                        <td>10%</td>
+                                                        <td>$2,000.00</td>
+                                                    </tr>
+                                                    <!--  -->
+                                                    <tr>
+                                                        <td>ETH Long</td>
+                                                        <td>$100,000.00</td>
+                                                        <td>03/16/21</td>
+                                                        <td>$20,000.00</td>
+                                                        <td>10%</td>
+                                                        <td>$2,000.00</td>
+                                                    </tr>
+                                            
+                                            
+                                                </tbody>
+                                            </table>
+                                            <!--/ Table -->
+                                        </div>
+                                       
                                         <div class="invoice-summary " id="invoice-table-summary">
                                             <div class="qr-code mr-auto ">
                                                 <img src="assets/img/qr-code.png" alt="">
