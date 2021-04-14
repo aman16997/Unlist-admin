@@ -183,6 +183,7 @@
 .line-card-1 h5 {
   font-family: "MyriadPro-Regular";
   font-size: 15px;
+  font-weight: lighter;
 }
 .line-card {
   padding: 16px 16px 8px 16px;
