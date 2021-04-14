@@ -1,0 +1,85 @@
+/* 1st card */
+.accounts-card h5{
+font-size: 14px;
+font-weight: lighter;
+}
+/* 3rd Card */
+
+.unlisted-p-l .text-grey {
+  color: #b3b3b3;
+}
+.unlisted-p-l h6 {
+  margin-top: 4px;
+  font-family: "BebasNeue-Regular";
+  font-size: 18px;
+  font-weight: lighter;
+  color: #ffffff;
+  padding-right: 30px;
+}
+
+.unlisted-p-l h5 {
+  margin-top: 4px;
+  font-family: "BebasNeue-Regular";
+  font-size: 18px;
+  font-weight: lighter;
+  color: #808080;
+}
+/* 4th card */
+.outstanding-invoices h6 {
+  margin-top: 30px;
+  font-size: 14px;
+  font-weight: lighter;
+  color: #b3b3b3;
+}
+.outstanding-invoices h5 {
+  font-family: "BebasNeue-Regular";
+  font-size: 18px;
+  font-weight: lighter;
+  color: #ffffff;
+}
+
+.trade-revenue-heading {
+  margin-top: 20px;
+  font-family: "MyriadPro-Regular";
+  font-size: 14px;
+  color: #b3b3b3;
+  font-weight: lighter;
+}
+
+.trade-revenue td {
+  color: #808080;
+}
+
+.trade-revenue .column-left {
+  padding-right: 40px;
+}
+
+.trade-revenue .column-right h6 {
+  font-family: "BebasNeue-Regular";
+  font-size: 18px;
+  font-weight: lighter;
+  color: #ffffff;
+}
+
+.profit-loss {
+  font-family: "BebasNeue-Regular";
+  font-size: 18px;
+  font-weight: lighter;
+  color: #00ceff;
+}
+.table-search-card {
+  display: flex;
+  background-color: #3e3f41;
+  width: 280px;
+  color: #fff;
+  border-radius: 24px;
+  padding:5px 16px 4px 24px ;
+}
+.table-search-card h5{
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.table-search-card .line-card-icon{
+    margin-top: 4px;
+}

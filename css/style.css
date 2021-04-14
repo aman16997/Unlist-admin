@@ -15344,9 +15344,20 @@ html:not([dir="rtl"]) .list-inline {
     /* Change */
   }
 }
+@media (max-width: 991px) {
+  .c-main > .container-fluid,
+  .c-main > .container-sm,
+  .c-main > .container-md,
+  .c-main > .container-lg,
+  .c-main > .container-xl,
+  .c-main > .container-xxl {
+    padding-right: 30px;
+    padding-left: 140px;
+    /* Change */
+  }
+}
 
-
-@media (min-width: 769px) {
+@media (min-width: 992px) {
   .c-main > .container-fluid,
   .c-main > .container-sm,
   .c-main > .container-md,
@@ -15358,6 +15369,7 @@ html:not([dir="rtl"]) .list-inline {
     /* Change */
   }
 }
+
 
 .align-baseline {
   vertical-align: baseline !important;

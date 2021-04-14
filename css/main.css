@@ -57,16 +57,18 @@
   overflow: hidden;
 }
 
-.user-card-data h5, .user-card-data span, .user-card-data img{
+.user-card-data h5,
+.user-card-data span,
+.user-card-data img {
   margin-left: 8px;
 }
-.table-heading, .user-card-data thead th {
+.table-heading,
+.user-card-data thead th {
   font-family: "BebasNeue-Regular";
   font-size: 16px;
   font-weight: 200;
   font-weight: lighter;
 }
-
 
 @media (max-width: 1200px) {
   .user-card-data {
@@ -90,14 +92,12 @@
   margin-top: auto;
   margin-bottom: auto;
   font-family: "MyriadPro-Regular";
-  
+  font-weight: lighter;
 }
 .user-row span {
   color: rgb(147, 147, 147);
   font-family: "MyriadPro-Regular";
   font-size: 12px;
-
-
 }
 .user-row .flag-icon {
   height: 30px;
@@ -156,15 +156,13 @@
   display: flex;
   text-decoration: none;
 }
-.action-icons img{
+.action-icons img {
   margin-left: 2px !important;
-
 }
 .action-icons:hover {
-  margin-right: 12px;
   background-color: #525254;
   color: #fff;
-
+  align-items: center;
   border-radius: 50%;
   display: inline-block;
   text-align: center;
@@ -220,15 +218,16 @@
   margin-top: 2px;
   font-size: 16px;
   text-align: right;
-
 }
 .bitcoin-name {
   font-family: "MyriadPro-Regular";
   font-size: 16px;
   color: #a7a7a7;
 }
-.bitcoin-icon {
-}
+
+/* .bitcoin-icon {
+} */
+
 .trade-table {
   margin-top: 24px;
   margin-left: 24px;
@@ -293,7 +292,6 @@
   border-radius: 0 25px 25px 0;
 }
 
-
 .version-progress-fill:hover {
   background-color: #00d4ff;
 }
@@ -325,6 +323,11 @@
 }
 
 @media (max-width: 500px) {
+  .bitcoin-value {
+    font-family: "MyriadPro-Regular";
+    margin-top: 0;
+    font-size: 14px;
+  }
   .trade-table {
     margin-top: 24px;
     margin-left: 12px;
@@ -340,4 +343,11 @@
     margin-top: 60%;
     margin-left: 40px;
   }
+}
+
+@media (max-width: 340px) {
+  .trade-percentage {
+    margin-top: 20%;
+  }
+
 }

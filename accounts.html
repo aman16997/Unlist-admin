@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v3.4.0
+* @link https://coreui.io
+* Copyright (c) 2020 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+<html lang="en">
+
+<head>
+    <base href="./" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    <title>Kraken</title>
+
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Custom Style -->
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/typo.css" rel="stylesheet" />
+    <link href="css/bootstrapChanges.css" rel="stylesheet" />
+    <link href="css/accounts.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Cache Clear -->
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <!-- /Cache -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+</head>
+
+<body class="c-app">
+    <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show c-sidebar-minimized" id="sidebar">
+        <ul class="c-sidebar-nav">
+            <!--  -->
+            <li class="c-sidebar-nav-item nav-dark nav-disable p-3">
+                <img src="assets/img/menu/logo.svg" alt="" class="ml-3" />
+            </li>
+            <li class="c-sidebar-nav-item nav-dark nav-disable p-3">
+                <img src="assets/img/avatars/2.jpg" alt="" class="user-image ml-3" />
+                <br />
+                <div class="card-title ml-4">JUDO</div>
+            </li>
+            <li class="c-sidebar-nav-item nav-dark nav-disable mt-n3">
+                <a class="c-sidebar-nav-link" href="users.html">
+                    <img src="assets/img/menu/user.svg" class="nav-icon-responsive" />
+                    <h6>Users</h6>
+                </a>
+            </li>
+            <li class="c-sidebar-nav-item nav-dark nav-disable">
+                <a class="c-sidebar-nav-link" href="#">
+                    <img src="assets/img/menu/chat.svg" class="nav-icon-responsive" />
+                </a>
+            </li>
+            <!--  -->
+            <li class="c-sidebar-nav-item nav-dark nav-disable">
+                <a class="c-sidebar-nav-link" href="#">
+                    <img src="assets/img/menu/data.svg" class="nav-icon-responsive" />
+                </a>
+            </li>
+            <li class="c-sidebar-nav-item nav-dark nav-disable">
+                <a class="c-sidebar-nav-link" href="#">
+                    <img src="assets/img/menu/graph.svg" class="nav-icon-responsive" />
+                </a>
+            </li>
+            <li class="c-sidebar-nav-item nav-dark nav-disable ">
+                <a class="c-sidebar-nav-link" href="#">
+                    <img src="assets/img/menu/heart.svg" class="nav-icon-responsive" />
+                </a>
+            </li>
+            <li class="c-sidebar-nav-item nav-dark nav-disable nav-border-bottom ">
+                <a class="c-sidebar-nav-link " href="kraken.html">
+                    <img src="assets/img/menu/kraken.svg" class=" nav-icon-responsive" />
+                    <h6 class="ml-2 mt-3">Kraken</h6>
+                </a>
+            </li>
+            <li class="c-sidebar-nav-item nav-dark ">
+                <a class="c-sidebar-nav-link nav-active" href="#">
+                    <img src="assets/img/menu/dollar.svg" class="ml-1 nav-icon-responsive" />
+                    <h6 class="ml-1 mt-2">Accounts</h6>
+
+                </a>
+            </li>
+            <li class="c-sidebar-nav-item nav-dark nav-disable nav-border-up">
+                <a class="c-sidebar-nav-link" href="#">
+                    <img src="assets/img/menu/attention.svg" class="nav-icon-responsive" />
+                </a>
+            </li>
+            <li class="c-sidebar-nav-item nav-dark">
+                <a class="c-sidebar-nav-link nav-disable" href="#">
+                    <h5 class="nav-logout">LOGOUT</h5>
+                </a>
+            </li>
+            <li class="c-sidebar-nav-item nav-dark">
+                <div class="pb-5"></div>
+                <div class="pb-5"></div>
+                <div class="pb-5"></div>
+                <div class="pb-5"></div>
+                <div class="pb-5"></div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="c-wrapper c-fixed-components">
+        <div class="c-body">
+            <main class="c-main">
+                <div class="container-fluid">
+                    <div class="fade-in">
+                        <div class="row">
+                            <!-- 1st Card -->
+                            <div class="col-sm-6 col-lg-3 ">
+                                <div class="line-card text-white bg-dark">
+                                    <div class="">
+                                        <h5 class="card-title mb-1">ACCOUNTS</h5>
+                                    </div>
+                                </div>
+                                <a href="#" class="line-card-1 accounts-card text-white bg-dark mt-3">
+                                    <h5 class="mr-auto my-1">Auto Trading</h5>
+                                    <img class="line-card-icon" src="assets/img/drop-icon.svg" />
+                                        
+                                   
+                                </a>
+                                <a href="#" class="line-card-1 accounts-card text-white bg-dark mt-2">
+                                    <h5 class="mr-auto my-1">Subscriptions</h5>
+                                    <svg class="line-card-icon">
+                                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-caret-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <!-- 2nd Card -->
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="card card-linear-color text-white bg-dark mt-4 mt-sm-0">
+                                    <div class="card-body card-body pb-0">
+                                        <h5 class="card-title pb-3">SELECTED MONTHS INVOICES</h5>
+                                        <div class="d-flex">
+                                            <div class="card-data-number mt-2">
+                                                <h5>Sent</h5>
+                                                <h6 class="text-value-lg">793 | 828</h6>
+                                            </div>
+                                            <div class="ml-auto">
+                                                <div class="graph">
+                                                    <div id="smallGraph"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--  -->
+                                        <div class="d-flex mt-3">
+                                            <div class="card-data-number mt-2">
+                                                <h5>Opened</h5>
+                                                <h6 class="text-value-lg">780 | 828</h6>
+                                            </div>
+                                            <div class="ml-auto">
+                                                <div class="graph">
+                                                    <div id="smallGraph"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--  -->
+                                        <div class="d-flex mt-3">
+                                            <div class="card-data-number mt-2">
+                                                <h5>Paid</h5>
+                                                <h6 class="text-value-lg">2 | 828</h6>
+                                            </div>
+                                            <div class="ml-auto">
+                                                <div class="graph">
+                                                    <div id="smallGraph"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 3rd Card -->
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="card card-linear-color text-white bg-dark country-card">
+                                    <div class="card-body card-body pb-0">
+                                        <h5 class="card-title">UNLISTED P/L</h5>
+                                        <div class="unlisted-p-l mt-4">
+                                            <div class="text-grey">Selected Month</div>
+                                            <div class="d-flex">
+                                                <h6>$9,456,489</h6>
+                                                <h5>$18,456,489</h5>
+                                            </div>
+                                        </div>
+                                        <div class="unlisted-p-l mt-4">
+                                            <div class="text-grey">Year to Date</div>
+
+                                            <div class="d-flex">
+                                                <h6>$19,456,489</h6>
+                                                <h5>$18,456,489</h5>
+                                            </div>
+                                        </div>
+                                        <div class="unlisted-p-l mt-4">
+                                            <div class="text-grey">Total</div>
+                                            <div class="d-flex">
+                                                <h6>$19,456,489</h6>
+                                                <h5>$18,456,489</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 4TH Card -->
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="card card-linear-color text-white bg-dark country-card">
+                                    <div class="card-body card-body pb-0">
+                                        <h5 class="card-title">CASHFLOW</h5>
+                                        <div class="">
+                                            <div class="outstanding-invoices mr-auto mt-2">
+                                                <h6>Outstanding Invoices</h6>
+                                                <h5>$456,489</h5>
+                                            </div>
+                                            <div class="trade-revenue">
+                                                <h5 class="trade-revenue-heading">
+                                                    Current Trade Target Revenue
+                                                </h5>
+                                                <table>
+                                                    <tr>
+                                                        <td class="column-left">Volume</td>
+                                                        <td class="column-right">$7,469,258</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="column-left">Target</td>
+                                                        <td class="column-right">$21,889</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="column-left">Est. Date</td>
+                                                        <td class="column-right">03/19/21</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="column-left">U. Fees</td>
+                                                        <td class="column-right">
+                                                            <h6>$9,456,489</h6>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  Table-->
+                        <div class="card-1 card-linear-color bg-dark text-white user-card">
+                            <div class="card-body p-0">
+                                <div class="d-flex">
+                                    <h4 class="card-title px-4 pt-3">AUTOTRADING</h4>
+                                    <div class="ml-auto">
+                                            <a href="#" class="table-search-card mr-2 mt-2">
+                                                <h5 class="mr-auto my-1">Month</h5>
+                                                <svg class="line-card-icon">
+                                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-caret-right"></use>
+                                                </svg>
+                                            </a>
+                                    </div>
+                                    <a href="#" class=" pr-2 pt-2">
+                                        <img src="assets/img/add-button.svg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="user-card-data table-responsive-md mb-5">
+                                    <table id="example" class="table text-white table-sortable">
+                                        <thead>
+                                            <tr>
+                                                <th style="font-weight: 200">USER</th>
+                                                <th style="font-weight: 200">EMAIL</th>
+                                                <th style="font-weight: 200">P/L</th>
+                                                <th style="font-weight: 200">VALUE</th>
+                                                <th style="font-weight: 200">FEE</th>
+                                                <th style="font-weight: 200">DUE</th>
+                                                <th style="font-weight: 200; min-width: 60px">
+                                                    DUE DATE
+                                                </th>
+                                                <th style="font-weight: 200">OVERDUE</th>
+                                                <th style="font-weight: 200">INVOICED</th>
+                                                <th style="font-weight: 200">PAID</th>
+                                                <th style="font-weight: 200">ACTIONS</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!--  -->
+                                            <tr class="user-row">
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <img src="assets/img/avatars/2.jpg" alt="" class="user-image" />
+                                                        <h5 class="my-auto ml-2">Glenn Spong</h5>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <h5 class="">glenn.spong@gmail.com</h5>
+                                                </td>
+                                                <td>
+                                                    <h4 class="profit-loss">+23%</h4>
+                                                </td>
+                                                <td>
+                                                    <h5 class="">$23,654</h5>
+                                                </td>
+                                                <td>
+                                                    <h5>10%</h5>
+                                                </td>
+                                                <td>
+                                                    <h5 class="">$2,365</h5>
+                                                </td>
+                                                <td>
+                                                    <span>Monday</span>
+                                                    <h5>03/16/21</h5>
+                                                </td>
+
+                                                <td>
+                                                    <div class="d-flex">
+
+                                                        <h5 class="my-auto"></h5>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <img src="assets/img/right-icon.svg" alt="" />
+
+                                                </td>
+                                                <td>
+                                                    <img src="assets/img/right-icon.svg" alt="" />
+                                                </td>
+
+                                                <td class="">
+                                                    <div class="d-flex border-0">
+                                                        <a href="#" class="action-icons">
+                                                            <img src="assets/img/eye.svg" alt="" />
+                                                        </a>
+
+                                                        <a href="#" class="action-icons">
+                                                            <img src="assets/img/pause-icon.svg" alt="" />
+                                                        </a>
+                                                        <a href="#" class="action-icons">
+                                                            <img src="assets/img/bell-icon.svg" alt="" />
+                                                        </a>
+
+                                                        <a href="#" class="action-icons">
+                                                            <img src="assets/img/add.svg" alt="" />
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                          
+                                            <!--  -->
+                                            <tr class="user-row">
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <img src="assets/img/avatars/2.jpg" alt="" class="user-image" />
+                                                        <h5 class="my-auto ml-2">Glenn Spong</h5>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <h5 class="">glenn.spong@gmail.com</h5>
+                                                </td>
+                                                <td>
+                                                    <h4 class="profit-loss">+23%</h4>
+                                                </td>
+                                                <td>
+                                                    <h5 class="">$23,654</h5>
+                                                </td>
+                                                <td>
+                                                    <h5>10%</h5>
+                                                </td>
+                                                <td>
+                                                    <h5 class="">$2,365</h5>
+                                                </td>
+                                                <td>
+                                                    <span>Monday</span>
+                                                    <h5>03/16/21</h5>
+                                                </td>
+                                            
+                                                <td>
+                                                    <div class="d-flex">
+                                            
+                                                        <h5 class="my-auto">$52,986</h5>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <img src="assets/img/right-icon.svg" alt="" />
+                                            
+                                                </td>
+                                                <td>
+                                                    <img src="assets/img/close-icon.svg" alt="" />
+                                                </td>
+                                            
+                                                <td class="">
+                                                    <div class="d-flex border-0">
+                                                        <a href="#" class="action-icons">
+                                                            <img src="assets/img/eye.svg" alt="" />
+                                                        </a>
+                                            
+                                                        <a href="#" class="action-icons">
+                                                            <img src="assets/img/pause-icon.svg" alt="" />
+                                                        </a>
+                                                        <a href="#" class="action-icons">
+                                                            <img src="assets/img/bell-icon.svg" alt="" />
+                                                        </a>
+                                            
+                                                        <a href="#" class="action-icons">
+                                                            <img src="assets/img/add.svg" alt="" />
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <!--  -->
+                                                <tr class="user-row">
+                                                    <td>
+                                                        <div class="d-flex">
+                                                            <img src="assets/img/avatars/2.jpg" alt="" class="user-image" />
+                                                            <h5 class="my-auto ml-2">Glenn Spong</h5>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="">glenn.spong@gmail.com</h5>
+                                                    </td>
+                                                    <td>
+                                                        <h4 class="profit-loss">+23%</h4>
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="">$23,654</h5>
+                                                    </td>
+                                                    <td>
+                                                        <h5>10%</h5>
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="">$2,365</h5>
+                                                    </td>
+                                                    <td>
+                                                        <span>Monday</span>
+                                                        <h5>03/16/21</h5>
+                                                    </td>
+                                                
+                                                    <td>
+                                                        <div class="d-flex">
+                                                
+                                                            <h5 class="my-auto"></h5>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <img src="assets/img/right-icon.svg" alt="" />
+                                                
+                                                    </td>
+                                                    <td>
+                                                        <img src="assets/img/right-icon.svg" alt="" />
+                                                    </td>
+                                                
+                                                    <td class="">
+                                                        <div class="d-flex border-0">
+                                                            <a href="#" class="action-icons">
+                                                                <img src="assets/img/eye.svg" alt="" />
+                                                            </a>
+                                                
+                                                            <a href="#" class="action-icons">
+                                                                <img src="assets/img/pause-icon.svg" alt="" />
+                                                            </a>
+                                                            <a href="#" class="action-icons">
+                                                                <img src="assets/img/bell-icon.svg" alt="" />
+                                                            </a>
+                                                
+                                                            <a href="#" class="action-icons">
+                                                                <img src="assets/img/add.svg" alt="" />
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                
+                                                <!--  -->
+                                                    <tr class="user-row">
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <img src="assets/img/avatars/2.jpg" alt="" class="user-image" />
+                                                                <h5 class="my-auto ml-2">Glenn Spong</h5>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="">glenn.spong@gmail.com</h5>
+                                                        </td>
+                                                        <td>
+                                                            <h4 class="profit-loss">+23%</h4>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="">$23,654</h5>
+                                                        </td>
+                                                        <td>
+                                                            <h5>10%</h5>
+                                                        </td>
+                                                        <td>
+                                                            <h5 class="">$2,365</h5>
+                                                        </td>
+                                                        <td>
+                                                            <span>Monday</span>
+                                                            <h5>03/16/21</h5>
+                                                        </td>
+                                                    
+                                                        <td>
+                                                            <div class="d-flex">
+                                                    
+                                                                <h5 class="my-auto"></h5>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <img src="assets/img/right-icon.svg" alt="" />
+                                                    
+                                                        </td>
+                                                        <td>
+                                                            <img src="assets/img/right-icon.svg" alt="" />
+                                                        </td>
+                                                    
+                                                        <td class="">
+                                                            <div class="d-flex border-0">
+                                                                <a href="#" class="action-icons">
+                                                                    <img src="assets/img/eye.svg" alt="" />
+                                                                </a>
+                                                    
+                                                                <a href="#" class="action-icons">
+                                                                    <img src="assets/img/pause-icon.svg" alt="" />
+                                                                </a>
+                                                                <a href="#" class="action-icons">
+                                                                    <img src="assets/img/bell-icon.svg" alt="" />
+                                                                </a>
+                                                    
+                                                                <a href="#" class="action-icons">
+                                                                    <img src="assets/img/add.svg" alt="" />
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <!--  -->
+                                                        <tr class="user-row">
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <img src="assets/img/avatars/2.jpg" alt="" class="user-image" />
+                                                                    <h5 class="my-auto ml-2">Glenn Spong</h5>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="">glenn.spong@gmail.com</h5>
+                                                            </td>
+                                                            <td>
+                                                                <h4 class="profit-loss">+23%</h4>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="">$23,654</h5>
+                                                            </td>
+                                                            <td>
+                                                                <h5>10%</h5>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="">$2,365</h5>
+                                                            </td>
+                                                            <td>
+                                                                <span>Monday</span>
+                                                                <h5>03/16/21</h5>
+                                                            </td>
+                                                        
+                                                            <td>
+                                                                <div class="d-flex">
+                                                        
+                                                                    <h5 class="my-auto"></h5>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <img src="assets/img/right-icon.svg" alt="" />
+                                                        
+                                                            </td>
+                                                            <td>
+                                                                <img src="assets/img/right-icon.svg" alt="" />
+                                                            </td>
+                                                        
+                                                            <td class="">
+                                                                <div class="d-flex border-0">
+                                                                    <a href="#" class="action-icons">
+                                                                        <img src="assets/img/eye.svg" alt="" />
+                                                                    </a>
+                                                        
+                                                                    <a href="#" class="action-icons">
+                                                                        <img src="assets/img/pause-icon.svg" alt="" />
+                                                                    </a>
+                                                                    <a href="#" class="action-icons">
+                                                                        <img src="assets/img/bell-icon.svg" alt="" />
+                                                                    </a>
+                                                        
+                                                                    <a href="#" class="action-icons">
+                                                                        <img src="assets/img/add.svg" alt="" />
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        
+                                                        <!--  -->
+                                                            <tr class="user-row">
+                                                                <td>
+                                                                    <div class="d-flex">
+                                                                        <img src="assets/img/avatars/2.jpg" alt="" class="user-image" />
+                                                                        <h5 class="my-auto ml-2">Glenn Spong</h5>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <h5 class="">glenn.spong@gmail.com</h5>
+                                                                </td>
+                                                                <td>
+                                                                    <h4 class="profit-loss">+23%</h4>
+                                                                </td>
+                                                                <td>
+                                                                    <h5 class="">$23,654</h5>
+                                                                </td>
+                                                                <td>
+                                                                    <h5>10%</h5>
+                                                                </td>
+                                                                <td>
+                                                                    <h5 class="">$2,365</h5>
+                                                                </td>
+                                                                <td>
+                                                                    <span>Monday</span>
+                                                                    <h5>03/16/21</h5>
+                                                                </td>
+                                                            
+                                                                <td>
+                                                                    <div class="d-flex">
+                                                            
+                                                                        <h5 class="my-auto"></h5>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <img src="assets/img/right-icon.svg" alt="" />
+                                                            
+                                                                </td>
+                                                                <td>
+                                                                    <img src="assets/img/right-icon.svg" alt="" />
+                                                                </td>
+                                                            
+                                                                <td class="">
+                                                                    <div class="d-flex border-0">
+                                                                        <a href="#" class="action-icons">
+                                                                            <img src="assets/img/eye.svg" alt="" />
+                                                                        </a>
+                                                            
+                                                                        <a href="#" class="action-icons">
+                                                                            <img src="assets/img/pause-icon.svg" alt="" />
+                                                                        </a>
+                                                                        <a href="#" class="action-icons">
+                                                                            <img src="assets/img/bell-icon.svg" alt="" />
+                                                                        </a>
+                                                            
+                                                                        <a href="#" class="action-icons">
+                                                                            <img src="assets/img/add.svg" alt="" />
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            
+                                                            <!--  -->
+                                                            
+                                          
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- CoreUI and necessary plugins-->
+    <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+    <!--[if IE]><!-->
+    <script src="vendors/@coreui/icons/js/svgxuse.min.js"></script>
+    <!--<![endif]-->
+    <!-- Plugins and scripts required by this view-->
+    <script src="vendors/@coreui/chartjs/js/coreui-chartjs.bundle.js"></script>
+    <script src="vendors/@coreui/utils/js/coreui-utils.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#example").DataTable({
+                paging: false,
+                info: false,
+                searching: false,
+                columnDefs: [
+                    {
+                        searchable: false,
+                        orderable: false,
+                        targets: [10],
+                    },
+                ],
+            });
+        });
+    </script>
+</body>
+
+</html>
